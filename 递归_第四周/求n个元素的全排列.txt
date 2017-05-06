@@ -1,0 +1,38 @@
+求n个元素的全排列
+例如：
+a、b、c的全排列为
+abc
+acb
+bac
+bca
+cba
+cab
+
+
+a、b、c、d的全排列为
+a b c d 
+a b d c 
+a c b d 
+a c d b 
+a d c b 
+a d b c 
+b a c d 
+b a d c 
+b c a d 
+b c d a 
+b d c a 
+b d a c 
+c b a d 
+c b d a 
+c a b d 
+c a d b 
+c d a b 
+c d b a 
+d b c a 
+d b a c 
+d c b a 
+d c a b 
+d a c b 
+d a b c 
+
+现在的问题是对于给定的字符，输出这些字符组成的全排列。

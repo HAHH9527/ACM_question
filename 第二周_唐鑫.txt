@@ -1,0 +1,34 @@
+x     错  1. 1665
+            【错误原因：初始数据输错（设为555）  正确答案：58497】
+x     错  2. 5050
+            【错误原因：累加的只是每次增加的值  正确答案：171700】
+v     对  3. 145
+x     错  4. (i == j + k) || (j == i + k) || (k == i + j)
+            【错误原因，没有考虑从0开始累加  正确答案：i + j+2 == k+1 || i + k+2 == j+1 || k + j+2 == i+1】
+v     对  5. s + " " + (char) (i + 'A') + (char) (j + 'A') + (char) (k + 'A') + " " + remain(a)
+v     对  6. 29
+v     对  7. 768
+time out  8. 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	long n = sc.nextLong();
+	long max = n;
+	for (long i = 1; i <= n; i++) {
+	    long temp = i;
+	    while (temp != 1) {
+		if (temp % 2 == 0) {
+		    temp = temp / 2;
+		} else {
+		    temp = temp * 3 + 1;
+		}
+		if (temp > max) {
+		    max = temp;
+		}
+	    }
+	}
+	System.out.println(max);
+    }
+}

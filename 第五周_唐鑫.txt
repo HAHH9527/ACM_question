@@ -1,0 +1,50 @@
+1. a[i][j] = a[i - 1][j - 1] + a[i - 1][j]
+2. 1835421
+3. 93
+4. 1572836
+5. 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int x = sc.nextInt();
+	int n = sc.nextInt();
+	int sum = x;
+	for (int i = 0; i < n; i++) {
+	    String str = String.valueOf(sum);
+	    sum = 0;
+	    char[] c = str.toCharArray();
+	    int[] temp = new int[c.length];
+	    for (int j = 0; j < c.length; j++) {
+		temp[j] = c[j] - 48;
+		sum += temp[j] * temp[j];
+	    }
+	}
+	System.out.println(sum);
+    }
+}
+6. 
+
+7. 
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	while (sc.hasNext()) {
+	    String strN = sc.next();
+	    String strM = sc.next();
+	    BigInteger n = new BigInteger(strN);
+	    BigInteger m = new BigInteger(strM);
+	    BigInteger count = BigInteger.ONE;
+	    for (BigInteger i = new BigInteger("0"); i.compareTo(n) <= 0; i = i.add(BigInteger.ONE)) {
+		BigInteger temp = i.multiply(i);
+		count = count.add(temp);
+	    }
+	    BigInteger output = count.remainder(m);
+	    System.out.println(output.toString());
+	}
+    }
+}
